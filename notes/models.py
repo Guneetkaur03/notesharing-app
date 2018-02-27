@@ -3,7 +3,8 @@ from django.utils import timezone
 
 
 class details_notes(models.Model):
-    subject = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    subject = models.CharField(max_length=200)
+#models.ForeignKey('auth.User', on_delete=models.CASCADE)
     teacher = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
     description = models.TextField()
